@@ -1,6 +1,6 @@
 import customtkinter as ctk
 
-# थीम और कलर सेट करें
+# Set colour and theme
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
@@ -8,7 +8,7 @@ root = ctk.CTk()
 root.title("Ideal Gas Calculator")
 root.geometry("400x500")
 
-# कैलकुलेशन लॉजिक फंक्शन
+# Calculation
 def calculate():
     p_in = entry_p.get().strip().lower()
     v_in = entry_v.get().strip().lower()
@@ -35,7 +35,7 @@ def calculate():
     except ValueError:
         label_result.configure(text="Error: Invalid Input!")
 
-# UI डिजाइन (Labels and Entry Boxes)
+# UI Design (Labels and Entry Boxes)
 ctk.CTkLabel(root, text="Ideal Gas Law (PV = nRT)", font=("Arial", 20, "bold")).pack(pady=15)
 ctk.CTkLabel(root, text="Leave blank or type 'no' for the unknown value", font=("Arial", 12)).pack(pady=2)
 
